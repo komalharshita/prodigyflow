@@ -53,16 +53,15 @@ class Orchestrator:
         return enriched
 
     def _handle_research(self, text):
-        logging.info("Triggered Research Agent")
+        topic = text.replace("explain", "").strip()
+        response = self.researcher.generate_notes(topic)
 
-        topic = text.lower().replace("explain", "").replace("notes", "").strip()
-        if topic == "":
-            topic = "general concept"
+        agent_used = response.get("agent", "Unknown")
+        print(f"[INFO] Research Assistant handled using: {agent_used}")
 
-        notes = self.researcher.generate_notes(topic)
-        enhanced = self.loop_agent.refine(notes)
+        self.memory.add_history("research_agent", response)
+        return response
 
-        return enhanced
 
     def _handle_doubt(self, text):
         logging.info("Triggered Doubt Solver Agent")
