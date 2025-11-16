@@ -1,3 +1,6 @@
+import logging
+logging.basicConfig(level=logging.INFO)
+
 class SessionMemory:
     def __init__(self):
         self.history = []

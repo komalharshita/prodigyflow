@@ -1,3 +1,6 @@
+import logging
+logging.basicConfig(level=logging.INFO)
+
 class DoubtSolverAgent:
     def solve(self, question):
         return {

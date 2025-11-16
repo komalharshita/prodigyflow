@@ -1,3 +1,6 @@
+import logging
+logging.basicConfig(level=logging.INFO)
+
 from agents.study_planner import StudyPlannerAgent
 from agents.research_assistant import ResearchAssistantAgent
 from agents.doubt_solver import DoubtSolverAgent

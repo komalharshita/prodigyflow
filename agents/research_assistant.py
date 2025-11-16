@@ -1,3 +1,6 @@
+import logging
+logging.basicConfig(level=logging.INFO)
+
 class ResearchAssistantAgent:
     def generate_notes(self, topic):
         return {

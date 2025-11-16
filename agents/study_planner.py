@@ -1,3 +1,6 @@
+import logging
+logging.basicConfig(level=logging.INFO)
+
 from core.tools import estimate_time
 
 class StudyPlannerAgent:
