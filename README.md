@@ -119,7 +119,35 @@ User: Why is my SQL query wrong?
 
 ---
 
-##  **Submission Track**
+## **Gemini Integration (LLM-Powered Agent)**
+
+ProdigyFlow includes an optional **Gemini-powered Agent** using Google’s `google-generativeai` SDK.
+
+### How it works
+
+A dedicated `gemini_agent.py` file handles:
+
+* LLM-based explanations
+* Research enhancements
+* Content generation
+
+To enable it:
+
+1. Get an API key from
+   [https://aistudio.google.com](https://aistudio.google.com)
+2. Add it to your environment:
+
+```bash
+export GOOGLE_API_KEY="your_key"
+```
+
+3. The orchestrator routes queries requiring richer reasoning to the Gemini Agent.
+
+This addition enhances the project with **LLM augmentation**, satisfying optional advanced features for the course.
+
+---
+
+## **Submission Track**
 
 **Track:** Concierge Agents
 **Theme:** Student Productivity Assistant
