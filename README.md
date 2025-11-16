@@ -5,7 +5,7 @@ Built as part of the **Google x Kaggle AI Agents Intensive (Nov 2025)**, this pr
 
 ---
 
-## ** My Project Overview**
+## **My Project Overview**
 
 Students often struggle with scattered resources, unstructured planning, and slow doubt resolution. ProdigyFlow solves this using three simple AI agents:
 
