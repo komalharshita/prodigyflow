@@ -18,3 +18,9 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+from agents.loop_agent import LoopAgent
+
+loop = LoopAgent()
+print("Loop Agent Demo:")
+print(loop.run_until_complete("Review topic", steps=3))
