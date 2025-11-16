@@ -1,102 +1,134 @@
-# **ProdigyFlow: AI Study & Productivity Concierge**
+# **ProdigyFlow – A Multi-Agent Learning Assistant**
 
-ProdigyFlow is a **multi-agent academic assistant** designed to help students plan, learn, research, and improve productivity using AI, which I built for the **Google × Kaggle AI Agents Intensive (2025) Capstone Project**.
-
----
-
-## Overview
-
-ProdigyFlow uses a team of AI agents to automate:
-
-* Study planning
-* Research & note generation
-* Doubt solving
-* Flashcards & summaries
-* Topic mastery checks
-* Progress tracking
-* Personalized learning using memory
-
-The goal is to reduce manual workload and help students study smarter.
+ProdigyFlow is a lightweight multi-agent AI system designed to improve student productivity by helping with study planning, research assistance, and doubt solving.
+Built as part of the **Google x Kaggle AI Agents Intensive (Nov 2025)**, this project demonstrates practical use of agent orchestration, tool use, and session memory.
 
 ---
 
-## Core Features
+## ** My Project Overview**
 
-* **Orchestrator Agent** → routes tasks
-* **Study Planner Agent** → builds daily/weekly plans
-* **Research Agent** → finds resources & creates summaries
-* **Doubt Solver Agent** → explains concepts / solves problems
-* **Mastery Checker Agent** → quizzes + evaluates weak areas
-* **Loop Agent** → continuous improvement
-* **Memory Bank** → stores progress, preferences, past results
+Students often struggle with scattered resources, unstructured planning, and slow doubt resolution. ProdigyFlow solves this using three simple AI agents:
 
-Tools used: Google Search, Code Execution, custom tools, session state & memory.
+### **1. Study Planner Agent**
+
+Creates daily or weekly study plans based on:
+
+* syllabus/topics
+* time availability
+* difficulty levels
+
+### **2. Research Assistant Agent**
+
+Fetches explanations, summaries, examples, and structured notes for any topic.
+
+### **3. Doubt Solver Agent**
+
+Helps clarify concepts, explains mistakes, and answers technical questions.
+
+Each agent is coordinated through a central **Orchestrator**, which routes the user’s query to the right agent.
 
 ---
 
-## Architecture
+## **Features Used (Course Requirements)**
+
+This project demonstrates:
+
+✔ Multi-Agent System (3 agents)
+✔ Sequential Orchestration
+✔ Simple Custom Tool (helper functions)
+✔ Session Memory
+✔ Context Management
+✔ Clean Modularity & Logging
+
+---
+
+## **Architecture**
 
 ```
-Orchestrator
+User → Orchestrator → Selected Agent → Response
+                     ↑
+                 Session Memory
+```
+
+* The **Orchestrator** interprets the user’s intent
+* Passes it to the appropriate agent
+* Agents use tools + memory to give helpful responses
+* Memory keeps recent context across turns
+
+---
+
+## **Project Structure**
+
+```
+prodigyflow/
 │
-├── Study Planner Agent
-├── Research Agent
-├── Doubt Solver Agent
-└── Mastery Checker Agent
-
-Shared:
-- Memory Bank
-- Custom Tools
-- Gemini LLM
+├── agents/
+│   ├── study_planner.py
+│   ├── research_assistant.py
+│   └── doubt_solver.py
+│
+├── core/
+│   ├── orchestrator.py
+│   └── tools.py
+│
+├── memory/
+│   └── session_memory.py
+│
+├── main.py
+├── requirements.txt
+└── README.md
 ```
 
 ---
 
-## Setup
+## **How to Run**
+
+1. Clone the repo
 
 ```bash
-git clone https://github.com/komalharshita/prodigyflow.git
+git clone https://github.com/yourusername/prodigyflow
 cd prodigyflow
+```
+
+2. Install dependencies
+
+```bash
 pip install -r requirements.txt
-export GOOGLE_API_KEY="your_key"
 ```
 
-Run the demo:
+3. Run the system
 
-```
-notebook/prodigyflow_demo.ipynb
-```
-
----
-
-## Some use cases 
-
-```
-"Create a 7-day study plan for DBMS, OS, DSA."
-"Summarize SQL joins and provide practice problems."
-"Explain recursion with examples."
-"Make 10 flashcards for Machine Learning basics."
-"Quiz me on Operating Systems."
+```bash
+python main.py
 ```
 
 ---
 
-## Key concepts learned like
+## **Usage Example**
 
-* Multi-agent system
-* Custom tools
-* Search & code execution tools
-* Memory & session state
-* A2A communication
-* Loop agents
-* Observability
-* Gemini LLM integration
+```
+User: I have 4 hours today, help me plan study.
+→ Study Planner Agent
 
----
+User: Explain TCP handshake in simple terms.
+→ Research Assistant Agent
 
-## Summary
-
-ProdigyFlow is a practical academic productivity system that automates study workflows and showcases real agent architecture. I have tried to apply the key concepts from AI Agents Intensive course.
+User: Why is my SQL query wrong?
+→ Doubt Solver Agent
+```
 
 ---
 
+##  **Submission Track**
+
+**Track:** Concierge Agents
+**Theme:** Student Productivity Assistant
+
+---
+
+## Acknowledgements
+
+Built for the **Google x Kaggle AI Agents Intensive 2025**
+Inspired by challenges faced by students in CS & Engineering.
+
+---
