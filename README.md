@@ -1,4 +1,4 @@
-# **ProdigyFlow – A Multi-Agent Learning Assistant**
+# **ProdigyFlow – A Multi-Agent Data Analyst Workflow Agent**
 
 ProdigyFlow is a lightweight multi-agent AI system designed to improve student productivity by helping with study planning, research assistance, and doubt solving.
 Built as part of the **Google x Kaggle AI Agents Intensive (Nov 2025)**, this project demonstrates practical use of agent orchestration, tool use, and session memory.
