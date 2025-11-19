@@ -2,14 +2,15 @@
 
 *A Capstone Project for the Kaggle Agents Intensive Program*
 
+<img width="900" height="550" alt="main thumbnai" src="https://github.com/user-attachments/assets/34db2c20-72e7-463f-8aff-ad6f65d977ea" />
+
 ---
 
 ## **Overview**
 
 **ProdigyFlow** was created with a clear mission: to demonstrate how agentic systems can transform traditional data analytics by automating the entire workflow—from raw messy data to polished insights and dashboards. In a world where decision-making is becoming more fast-paced and data-heavy, intelligent agents offer a future-ready solution.
 
-This project aims not just to analyze data, but to showcase what agent-powered automation can achieve in a professional analytics pipeline.**
-**ProdigyFlow** is an end-to-end autonomous **Data Analytics Agent System** built to clean data, analyze trends, generate insights, and produce dashboards with minimal human intervention. Designed as part of the Kaggle Agents Intensive Capstone Project, ProdigyFlow demonstrates the power of agentic automation in real-world data workflows.
+This project aims not just to analyze data, but to showcase what agent-powered automation can achieve in a professional analytics pipeline. **ProdigyFlow** is an end-to-end autonomous **Data Analytics Agent System** built to clean data, analyze trends, generate insights, and produce dashboards with minimal human intervention. Designed as part of the Kaggle Agents Intensive Capstone Project, ProdigyFlow demonstrates the power of agentic automation in real-world data workflows.
 
 This project brings together intelligent agents, curated tools, and a smooth analytics pipeline—allowing you to go from *raw data → insights → reports → dashboards* automatically.
 
