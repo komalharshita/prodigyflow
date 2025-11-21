@@ -31,8 +31,9 @@ ProdigyFlow reflects our goal to create **simple, useful, modular tools** that s
 ---
 
 ## 🧠 Core Features
+
 | Feature | Description |
-|--------|------------|
+|---------|------------|
 | Automated Data Analysis Agent | Generates insights, metadata & summaries |
 | Visualization Agent | Creates automated charts & visual summaries |
 | Gemini-powered AI Summary | Natural-language insights from data |
@@ -43,8 +44,9 @@ ProdigyFlow reflects our goal to create **simple, useful, modular tools** that s
 ---
 
 ## 🤖 Core System Agents
+
 | Agent Name | Responsibility | Output |
-|-----------|---------------|--------|
+|----------- |---------------|--------|
 | `analysis_agent.py` | Reads dataset, extracts statistics, generates Gemini summary | Insights, metadata JSON |
 | `visualization_agent.py` | Generates visual graphs and saves locally | PNG charts |
 | `cleaning_agent.py` | Cleans missing values, formatting, and structure | Cleaned dataset |
