@@ -28,7 +28,7 @@ except ImportError:
 # --------------------------------------------
 #  Gemini Configuration (Optional)
 # --------------------------------------------
-def configure_gemini(api_key: os.environ.get("AIzaSyDsRf396SxARygGEPNgU8C-NJJO-XRVC20")) -> bool:
+def configure_gemini(api_key: os.environ.get("YOUR_API_KEY")) -> bool:
     """
     Configures Gemini only if API key is provided and package is installed.
     """

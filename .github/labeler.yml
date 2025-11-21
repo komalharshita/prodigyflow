@@ -1,0 +1,16 @@
+# Example labeling rules
+documentation:
+  - "**/*.md"
+
+frontend:
+  - "src/frontend/**"
+
+backend:
+  - "src/backend/**"
+
+python:
+  - "**/*.py"
+
+dependencies:
+  - "requirements.txt"
+  - "package*.json"
