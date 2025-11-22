@@ -1,7 +1,5 @@
 # agents/analysis_agent.py
-
 #Analysis Agent for ProdigyFlow | Performs simple EDA and generates AI insights using Google ADK.
-
 
 import pandas as pd
 import os
@@ -53,11 +51,11 @@ def generate_adk_insights(text: str) -> str:
 
     except Exception as e:
         return f"AI summary unavailable ({str(e)})."
-
-
+        
 # -------------------------
 # Main Analysis Function
 # -------------------------
+
 def analyze(cleaned_csv_path: str, logger=None):
     if logger:
         logger.info("Loading cleaned dataset...")
