@@ -8,11 +8,11 @@
 
 ## **Overview**
 
-**ProdigyFlow** was created with a clear mission: to demonstrate how agentic systems can transform traditional data analytics by automating the entire workflow—from raw messy data to polished insights and dashboards. In a world where decision-making is becoming more fast-paced and data-heavy, intelligent agents offer a future-ready solution.
+**ProdigyFlow** is a fully autonomous, multi-agent data analytics pipeline designed to transform raw, unstructured data into clean datasets, meaningful insights, and ready-to-use visualizations — without manual intervention. Created for the **Kaggle Agents Intensive Capstone Project**, this system demonstrates how intelligent agents can streamline and accelerate traditional analytics workflows.
 
-This project aims not just to analyze data, but to showcase what agent-powered automation can achieve in a professional analytics pipeline. **ProdigyFlow** is an end-to-end autonomous **Data Analytics Agent System** built to clean data, analyze trends, generate insights, and produce dashboards with minimal human intervention. Designed as part of the Kaggle Agents Intensive Capstone Project, ProdigyFlow demonstrates the power of agentic automation in real-world data workflows.
+Instead of writing repetitive cleaning scripts or manually generating plots, ProdigyFlow shows how an agentic architecture can automate **data preparation, exploratory analysis, insight extraction, reporting, and visualization generation** in one coordinated flow.
 
-This project brings together intelligent agents, curated tools, and a smooth analytics pipeline—allowing you to go from *raw data → insights → reports → dashboards* automatically.
+The result is a modern, efficient, and scalable analytics pipeline that reflects real-world industry processes and the future direction of automated data intelligence.
 
 ---
 
@@ -25,43 +25,48 @@ This project brings together intelligent agents, curated tools, and a smooth ana
 
 ## 🎯 **Why We Chose This Project**
 
-We selected this idea because **agentic workflows represent the next evolution of data analytics and business intelligence.** As Computer Science engineering students, we wanted to build something that:
+We selected this project because **agent-driven analytics represents the next major shift in business intelligence and data engineering**. Data teams spend a large portion of time on manual cleaning, repetitive EDA, and visualization tasks. We wanted to build a system that:
 
-* Mimics real-world analytics pipelines
-* Showcases advanced automation using agents
-* Demonstrates our skills in Python, data analysis, dashboards, and system design
-* Solves a common industry challenge: *turning data into insights faster and with fewer manual steps*
+* Simulates an industry-grade analytics pipeline
+* Shows how agents can automate real analytics tasks
+* Demonstrates practical use of Python, automation, visualization, and system design
+* Reduces manual overhead and speeds up insight generation
 
-Additionally, building an AI-driven analytics system aligns strongly with future data engineering trends like:
+This project also aligns with emerging trends such as:
 
-* Autonomous BI
-* Auto-EDA & Auto-reporting
-* Multi-agent collaboration
-* Tool-augmented analysis
+* AI-powered data preparation
+* Autonomous EDA
+* Multi-agent coordination
+* Unified data workflows
+* Intelligent reporting systems
 
-This project is both academically valuable and professionally relevant.
+Our goal was to create something academically strong, professionally relevant, and future-ready.
 
 ---
 
 ## **Project Goals**
 
-ProdigyFlow automates the core analytics lifecycle:
+ProdigyFlow automates the core components of the analytics lifecycle:
 
 1. **Data Ingestion & Cleaning**
 2. **Exploratory Data Analysis (EDA)**
-3. **Insight Generation & Reporting**
-4. **Dashboard Creation & Publishing**
+3. **Insight Generation & Summary Reporting**
+4. **Visualization & Dashboard Preparation**
 
 ---
 
 ## **System Architecture**
 
-ProdigyFlow consists of three main components:
+ProdigyFlow is built as a multi-agent system, with each agent responsible for a single stage of the pipeline:
 
-* **Agent Layer** — Autonomous agents responsible for cleaning, analysis, and visualization.
-* **Tools Layer** — Custom MCP tools that enhance agent capabilities.
-* **Analytics Layer** — Dashboarding and reporting.
-<insert arch diagram>
+* **Cleaning Agent** — Parses and cleans raw data
+* **Analysis Agent** — Performs structured EDA and auto-summaries
+* **Visualization Agent** — Generates charts and visual insights
+* **Main Agent** — Orchestrates the entire pipeline end-to-end
+
+It uses a tools layer (MCP utilities) for data handling, visualization, logging, and reporting.
+
+<img width="700" height="900" alt="PRODIGYFLOW ARCH" src="https://github.com/user-attachments/assets/5b92719b-6088-414f-94ee-4d1838701918" />
 
 ---
 
@@ -88,7 +93,7 @@ ProdigyFlow/
 │   └── Architecture_Diagram.png
 ├── dashboard/          
 ├── prodigyflow-kaggle-notebook.ipynb
-├── test_gemini.txt     
+├── test_gemini.py     
 ├── README.md
 ├── requirements.txt
 └── LICENSE
@@ -98,94 +103,98 @@ ProdigyFlow/
 
 ## **Our Core Agents**
 
-
-| **Agent Name**              | **Role**                  | **Key Responsibilities**                                                                                       | **Outputs**                                           |
-| --------------------------- | ------------------------- | -------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------- |
-| **Cleaning Agent**          | Data Preparation          | - Handle missing values<br>- Fix data types<br>- Detect & treat outliers<br>- Standardize dataset              | Clean dataset stored in `data/cleaned/`               |
-| **Analysis Agent**          | Exploratory Data Analysis | - Generate descriptive stats<br>- Identify correlations & patterns<br>- Detect anomalies<br>- Extract insights | Insights text + summary files in `/reports`           |
-| **Visualization Agent**     | Data Visualization        | - Create charts (matplotlib/plotly)<br>- Prepare figures for dashboards<br>- Generate export-ready visuals     | PNG/JPEG visual assets in `/reports` and `/dashboard` |
-| **Main Orchestrator Agent** | Workflow Automation       | - Trigger all agents<br>- Manage pipeline flow<br>- Maintain logs<br>- Ensure reproducible execution           | Pipeline logs + consolidated results                  |
+| **Agent Name**              | **Role**                  | **Key Responsibilities**                                                                   | **Outputs**                                          |
+| --------------------------- | ------------------------- | ------------------------------------------------------------------------------------------ | ---------------------------------------------------- |
+| **Cleaning Agent**          | Data Preparation          | Missing values, type fixing, duplicate removal, basic transformations                      | Cleaned dataset (`data/cleaned/`)                    |
+| **Analysis Agent**          | Exploratory Data Analysis | Summary stats, correlations, patterns, anomaly signals, AI-generated summaries             | Insight dictionaries + summary text (`/reports`)     |
+| **Visualization Agent**     | Data Visualization        | Generates charts, comparison plots, trend graphs, and export-ready visuals                 | PNG/JPG visual assets in `/reports` and `/dashboard` |
+| **Main Orchestrator Agent** | Workflow Automation       | Runs the full pipeline, manages logging, triggers all agents, handles errors and reporting | Final HTML/PDF report + logs + consolidated outputs  |
 
 ---
 
 ## **Dashboard**
 
-It includes:
+The dashboard includes:
 
-* Overview metrics
-* Trend analysis
-* Category-wise breakdowns
-* Anomaly detection panels
+* High-level overview metrics
+* Subject-wise performance trends
+* Distribution and comparison charts
+* Correlation insights
+* Summary sections for fast interpretation
 
 ---
 
 ## **Technologies Used**
 
-* **Python** (Pandas, NumPy, Scikit-learn)
-* **Agents & Automation**
-* **Power BI** for dashboarding
-* **Matplotlib / Plotly** for visualizations
-* **MCP (Model Context Protocol)** tools
+* **Python** — Pandas, NumPy, Matplotlib
+* **Agentic Automation** (multi-agent pipeline)
+* **MCP Tools** — for modular utilities & orchestration
+* **Jupyter Notebook** — Kaggle-friendly analysis environment
 
 ---
 
 ## **What We Learned**
 
-Building **ProdigyFlow** helped us strengthen both technical and conceptual skills, including:
+### **Technical Learnings**
 
-### **Technical Skills**
-
-* Designing autonomous agent workflows
-* Building modular Python architectures
-* Cleaning and transforming datasets efficiently
-* Performing deep exploratory analysis
-* Creating visualizations and dashboards
-* Writing structured reports & summaries
-* Maintaining clean project architecture
-* Understanding tool orchestration using MCP
+* Designing and coordinating multi-agent workflows
+* Structuring scalable and modular Python projects
+* Cleaning and transforming real-world datasets
+* Automating EDA and summarization
+* Creating detailed visualizations and exporting them
+* Building HTML reports and tracking logs
+* Managing experiments and reproducibility
 
 ### **Conceptual Learnings**
 
-* How to convert a vague business problem into an analytics workflow
-* The importance of reproducibility and documentation
-* How to structure large-scale team projects
-* How to evaluate data quality & readiness
-* Collaborative development workflows using GitHub
+* How to convert raw business problems into actionable pipelines
+* Importance of systematic cleaning and traceability
+* How automation can reduce repetitive tasks
+* How to maintain readability and structure in multi-file projects
+* Working collaboratively with GitHub and version control
 
-This project enhanced our clarity on how modern data systems operate and the role of automation in analytics.
+This project deepened our understanding of modern analytics pipelines and how automation can enhance efficiency.
 
 ---
 
 ## **How to Run**
 
-1. Clone the repository:
+1. **Clone the repository**
 
 ```bash
 git clone https://github.com/yourusername/ProdigyFlow.git
 cd ProdigyFlow
 ```
 
-2. Install dependencies:
+2. **Install dependencies**
 
 ```bash
 pip install -r requirements.txt
 ```
 
-3. Run the Main Agent:
+3. **Run the Main Agent**
 
 ```bash
 python agents/main_agent.py
 ```
+
+4. View outputs in:
+
+* `/data/cleaned/` — cleaned dataset
+* `/reports/` — summaries, logs, report.html
+* `/dashboard/` — visual assets
+
 ---
 
 ## **License**
 
-This project is licensed under the MIT License. See `LICENSE` for more information.
+Licensed under the MIT License. See `LICENSE` for details.
 
 ---
 
 ## **Acknowledgements**
 
-This project was built as part of the **Kaggle Agents Intensive Capstone Project**. Special thanks to mentors and the Kaggle community for continuous support.
+This project was developed as part of the **Kaggle Agents Intensive Capstone Project**.
+Huge thanks to the mentors, Kaggle community, and all contributors who supported our learning journey.
 
 ---
